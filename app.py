@@ -7,7 +7,7 @@ add = []
 
 @app.route('/index', methods=["GET"])
 def index():
-    return render_template('add.html', add=adds)
+    return render_template('add.html')
 
 @app.route('/', methods=["GET", "POST"])
 def add_order():
@@ -20,7 +20,7 @@ def add_order():
             'prize': _prize,
             'category': _category}
         adds.append(add)
-    return render_template('index.html')
+    return render_template('index.html', adds=add)
     
 
 if __name__ == '__main__':
