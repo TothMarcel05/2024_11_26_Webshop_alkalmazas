@@ -4,28 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Növénytáblázat</title>
+    <title>Új termék</title>
 </head>
 <body>
-    <h1>Növények listája</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Név</th>
-                <th>Típus</th>
-                <th>Jellemző</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for plant in plants %}
-            <tr>
-                <td>{{ plant.name }}</td>
-                <td>{{ plant.type }}</td>
-                <td>{{ plant.feature }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <p><a href="{{ url_for('home') }}">Vissza a főoldalra</a></p>
+    <h1>Új termék hozzáadása űrlap</h1>
+
+        Név:<input type="text" name="name" value="nev"><br><br>
+        Ár:<input type="number" name="prize" value="ar"> Ft<br><br>
+        Kategória:<input type="tel" name="category" value="kategoria"><br><br>
+
+    <a href="/add" type="button">Új termék hozzáadása</a>
 </body>
 </html>
