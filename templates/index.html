@@ -17,11 +17,11 @@
             </tr>
         </thead>
         <tbody>
-            {% for add in adds %}
+            {% for adds in add %}
             <tr>
-                <td>{{ add.name }}</td>
-                <td>{{ add.prize }}</td>
-                <td>{{ add.category }}</td>
+                <td>{{ adds.name }}</td>
+                <td>{{ adds.prize }}</td>
+                <td>{{ adds.category }}</td>
             </tr>
             {% endfor %}
         </tbody>

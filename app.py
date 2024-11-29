@@ -7,7 +7,7 @@ add = []
 
 @app.route('/index', methods=["GET"])
 def index():
-    return render_template('add.html', adds=adds)
+    return render_template('add.html', add=adds)
 
 @app.route('/', methods=["GET", "POST"])
 def add_order():
