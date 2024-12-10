@@ -4,12 +4,14 @@ app = Flask(__name__)
 
 adds = []
 add = []
-
+@app.route('/', methods=["GET"])
+def basic():
+    return render_template('index.html')
 @app.route('/index', methods=["GET"])
 def index():
     return render_template('add.html')
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/add', methods=["GET", "POST"])
 def add_order():
     if request.method == 'POST':
         _name = request.form.get('name')
