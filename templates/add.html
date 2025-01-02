@@ -8,11 +8,20 @@
 </head>
 <body>
     <h1>Új termék hozzáadása űrlap</h1>
+    <form action="/add" method="POST">
+        <label for="name">Név:</label>
+        <input type="text" name="name" id="name" placeholder="Termék neve" required><br><br>
 
-        Név:<input type="text" name="name" value="nev"><br><br>
-        Ár:<input type="number" name="prize" value="ar"> Ft<br><br>
-        Kategória:<input type="tel" name="category" value="kategoria"><br><br>
+        <label for="prize">Ár:</label>
+        <input type="number" name="prize" id="prize" placeholder="Ár (Ft)" required><br><br>
 
-    <a href="/add" type="button">Új termék hozzáadása</a>
+        <label for="category">Kategória:</label>
+        <input type="text" name="category" id="category" placeholder="Kategória" required><br><br>
+
+        <button type="submit">Új termék hozzáadása</button>
+    </form>
+
+    <br>
+    <a href="/">Vissza a főoldalra</a>
 </body>
 </html>

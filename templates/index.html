@@ -8,7 +8,9 @@
 </head>
 <body>
     <h1>Termékek listája</h1>
-    <table>
+    <img src="{{ url_for('static', filename='shop.jpg') }}" alt="Webshop" width="400px"><br><br>
+
+    <table border="1">
         <thead>
             <tr>
                 <th>Név</th>
@@ -17,17 +19,17 @@
             </tr>
         </thead>
         <tbody>
-            {% for adds in add %}
+            {% for product in adds %}
             <tr>
-                <td>{{ adds.name }}</td>
-                <td>{{ adds.prize }}</td>
-                <td>{{ adds.category }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.prize }} Ft</td>
+                <td>{{ product.category }}</td>
             </tr>
-            {% endfor %}<br><br>
+            {% endfor %}
         </tbody>
     </table>
 
-    <a href="/index" type="button">Új termék hozzáadása</a>
-
+    <br><br>
+    <a href="/add" type="button">Új termék hozzáadása</a>
 </body>
 </html>
